@@ -1,0 +1,22 @@
+# Секреты — САМОЕ ГЛАВНОЕ в этом файле
+variables.txt
+.env
+
+# Окружение
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log

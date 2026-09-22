@@ -1,0 +1,21 @@
+# Конфигурация для Amvera. Без этого файла Amvera использует свой
+# обычный Python-buildpack (без прав на apt-get) — тогда ffmpeg
+# поставить негде. С этим файлом Amvera соберёт бота из Dockerfile,
+# где ffmpeg ставится на этапе сборки образа.
+meta:
+  environment: docker
+  toolchain:
+    name: docker
+    version: latest
+
+build:
+  dockerfile: Dockerfile
+
+run:
+  # Папка для того, что должно переживать пересборку/перезапуск
+  # (сейчас бот ничего туда не пишет, но пусть будет на будущее —
+  # например, для истории ИИ-диалогов, см. README).
+  persistenceMount: /data
+  # Бот работает через polling (сам стучится в Telegram), а не как
+  # веб-сервер — порт ни на что не влияет, но поле обязательно.
+  containerPort: 80

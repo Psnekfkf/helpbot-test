@@ -1,0 +1,21 @@
+# Скопируй этот файл в variables.txt и впиши свои настоящие ключи.
+# variables.txt в .gitignore — он никогда не должен попасть в Git.
+
+TOKEN your_telegram_bot_token
+OPENWEATHER_KEY your_openweather_api_key
+OPENROUTER_KEY your_openrouter_api_key
+CITY Rostov-na-Donu
+MOM_CHAT_IDS 549864131,8987266887
+WATCH_USER_IDS 549864131,8987266887
+TARGET_CHANNEL_ID -1004360677978
+
+# Необязательно: без этих двух Spotify-ссылка будет вести на поиск,
+# а не на конкретный трек. Получить: https://developer.spotify.com/dashboard
+# -> Create app -> Client ID / Client Secret.
+SPOTIFY_CLIENT_ID your_spotify_client_id
+SPOTIFY_CLIENT_SECRET your_spotify_client_secret
+
+# Необязательно: консольный ввод (main.py) шлёт мамой в Telegram всё,
+# что напишешь в STDIN бота. Выключено по умолчанию — см. README,
+# раздел про "консоль" на Amvera, прежде чем включать.
+CONSOLE_INPUT_ENABLED false
